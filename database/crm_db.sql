@@ -7,6 +7,23 @@
 -- Server version: 10.4.11-MariaDB
 -- PHP Version: 7.2.28
 
+-- This SQL script creates and populates the `crm_db` database for a Customer Relationship Management System.
+-- It includes the following tables:
+-- 1. `customers`: Stores customer information including id, firstname, lastname, username, password, avatar, last login, date added, and date updated.
+-- 2. `quote`: Stores quotes with id, email, service ids, and date created.
+-- 3. `services`: Stores services with id, category id, service name, description, and image path.
+-- 4. `services_category`: Stores service categories with id, category name, and description.
+-- 5. `system_info`: Stores system metadata with id, meta field, and meta value.
+-- 6. `tickets`: Stores tickets with id, title, description, status, service id, user id, user created, date created, and date updated.
+-- 7. `ticket_comment`: Stores comments on tickets with id, ticket id, comment, user id, user created, and date created.
+-- 8. `users`: Stores user information including id, firstname, lastname, username, password, avatar, last login, date added, and date updated.
+
+-- The script also includes:
+-- - Indexes for each table.
+-- - AUTO_INCREMENT settings for primary key columns.
+-- - Initial data insertion for each table.
+-- - Transaction management commands to ensure data integrity.
+
 SET SQL_MODE = "NO_AUTO_VALUE_ON_ZERO";
 SET AUTOCOMMIT = 0;
 START TRANSACTION;
